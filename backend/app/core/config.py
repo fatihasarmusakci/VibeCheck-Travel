@@ -24,6 +24,9 @@ class Settings(BaseSettings):
     openai_api_key: str | None = None
     openai_model: str = "gpt-4o-mini"
 
+    gemini_api_key: str | None = None
+    gemini_model: str = "gemini-1.5-flash"
+
     celery_broker_url: str = "redis://localhost:6379/0"
     celery_result_backend: str = "redis://localhost:6379/0"
     celery_eager: bool = Field(

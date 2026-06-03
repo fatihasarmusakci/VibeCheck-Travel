@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 
 import type { SurfaceType, VibecheckDataBundle } from './features/vibecheck/types'
 import { vibecheckService } from './services/vibecheck-provider'
+import HotelAnalysisCard from './components/HotelAnalysisCard'
 
 function App() {
   const [sessionStart] = useState(() => Date.now())
@@ -201,6 +202,8 @@ function App() {
                 <p className="muted">Red flags: {activeHotel.flags.join(', ')}</p>
               </article>
             </div>
+
+            <HotelAnalysisCard reviews={activeHotel.reviews || []} />
 
             <article className="card">
               <h3>Interactive Vibe-Map</h3>

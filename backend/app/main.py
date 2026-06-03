@@ -7,6 +7,7 @@ from app.core.error_handlers import register_exception_handlers
 from app.core.middleware import ErrorHandlingMiddleware
 from app.db.session import AsyncSessionLocal, init_db
 from app.routers.engagement_routes import router as engagement_router
+from app.routers.hotel_analysis_routes import router as hotel_analysis_router
 from app.routers.hotels_routes import router as hotels_router
 from app.routers.reviews_routes import router as reviews_router
 from app.routers.users_routes import router as users_router
@@ -45,3 +46,4 @@ app.include_router(users_router)
 app.include_router(reviews_router)
 app.include_router(vibe_map_router)
 app.include_router(engagement_router)
+app.include_router(hotel_analysis_router)
